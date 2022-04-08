@@ -3,7 +3,7 @@ const path = require("path");
 const basePath = process.cwd();
 const fs = require("graceful-fs");
 
-const ipfsMetas
+const ipfsMetas = JSON.parse(fs.readFileSync(`${basepath}/build/json/_ipfsMetas.json`))
 
 const { fetchNoRetry } = require(`${basePath}/utils/functions/fetchWithRetry.js`);
 
